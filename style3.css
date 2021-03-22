@@ -23,7 +23,7 @@ overflow: scroll;
 	width: 100vw;
 	border: 5px solid black;
 	flex-flow: column nowrap;
-	overflow: scroll;
+	
 }
 
 .block-top {
