@@ -147,7 +147,7 @@ justify-content: space-between;
 	align-items: center;
 	height: 0.5rem;
 	padding: 1px;
-	width: 10rem;
+	width: 60%;
 	background: white; 
 	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3); 
 }
@@ -210,6 +210,7 @@ height: 100%;
 
     .contacts {
 		padding-left:1rem;
+		
 	}
 
 	.contact { 
@@ -230,6 +231,14 @@ height: 100%;
 		width: 100%;
 		padding: 0 1rem;
 		font-size: 10px;		
+	}
+
+	.skills {
+		width:50%;
+	}
+
+	.progressbar {
+		width: 50%;
 	}
 }
 
