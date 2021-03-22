@@ -30,12 +30,8 @@ Vue.component('duty-item', {
 	props: ['duty'],
 	template: `
 	<div class="marginbottom">
-	  
-	   
 	  <div class="main-inf">
-	
-	  <p>{{duty.value}}</p>
-	  
+	   <p>{{duty.value}}</p>
 	  </div>
    </div> 
 `
@@ -110,7 +106,7 @@ let app = new Vue({
         {id:3, title:'адрес', value:'Уфа, ул. Зои Космодемьянской, д.60'}
         ],
 		duties: [
-		{id:1, value:'Разработка сайтов для клиентов в команде программистов, их последующая поддержка'}	
+		{id:1, value:'Разработка сайтов для клиентов в команде программистов, их последующая поддержка.'}	
 		],
         jobs:[
           {title:'Видеомонтажер', year:'2011-2017', 
