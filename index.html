@@ -31,7 +31,7 @@
       <div class="block-left">
 
         <div class = "skills">
-          <h3 class = "contacts-title"><i class="fa fa-check"></i>навыки</h3>
+          <h3 class = "contacts-title"><i class="fa fa-check"></i>что знаю</h3>
           <skills-item
           v-for="item in skills" 
           :key="item.title"
@@ -41,7 +41,7 @@
           </skills-item>
         </div>
         <div class="contacts">
-          <h3 class = "contacts-title"><i class="fa fa-check"></i>контакты</h3>
+          <h3 class = "contacts-title"><i class="fa fa-check"></i>как меня найти</h3>
           <contacts-item 
             v-for="item in contacts" 
             :key="item.id"
@@ -53,7 +53,7 @@
      
         <div class="information">
           <div class="part-inf">
-            <h3 class = "inf-title">Обязанности</h3>
+            <h3 class = "inf-title">что ищу</h3>
               <duty-item
                v-for="item in duties" 
               :duty="item"
@@ -63,7 +63,7 @@
           </div> 
     
             <div class="part-inf">
-              <h3 class = "inf-title">отличия</h3>
+              <h3 class = "inf-title">чем отличилась</h3>
                 <differences-item
                 v-for="item in differences"
                 :best="item"
@@ -72,7 +72,7 @@
                 </differences-item>
             </div>
             <div class="part-inf">
-              <h3 class = "inf-title">опыт работы</h3>
+              <h3 class = "inf-title">где работала</h3>
               <job-item  
                v-for="item in jobs"
               v-bind:job="item"
@@ -80,7 +80,7 @@
               ></job-item>
             </div>
             <div class="part-inf">
-              <h3 class = "inf-title">образование</h3>
+              <h3 class = "inf-title">где училась</h3>
                 <education-item
                  v-for="item in education" 
                 :education="item"
