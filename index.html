@@ -49,7 +49,19 @@
           </contacts-item>
         </div> 
       </div>   
+     
+     
         <div class="information">
+          <div class="part-inf">
+            <h3 class = "inf-title">Обязанности</h3>
+              <duty-item
+               v-for="item in duties" 
+              :duty="item"
+              :key="item.id"
+              >
+              </duty-item>
+          </div> 
+    
             <div class="part-inf">
               <h3 class = "inf-title">отличия</h3>
                 <differences-item

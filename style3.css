@@ -21,7 +21,7 @@ overflow: scroll;
 
 .main-block {
 	display: flex;
-	width: 100vw;
+	width: 100%;
 	border: 5px solid black;
 	flex-flow: column nowrap;
 	
@@ -194,7 +194,7 @@ height: 100%;
 
 }
 	
-@media only screen and (max-width: 892px) and (orientation: landscape) {
+@media only screen and (max-width: 470px) and (orientation: landscape) {
 	/*html, body {
 	font-size: 10px;
 	}*/
@@ -245,7 +245,7 @@ height: 100%;
 	.skills .skill {
 		margin: 0;
 }
-
+}
 @media only screen and (min-width: 892px) {
 	.main-block {
 		width: 60rem;
