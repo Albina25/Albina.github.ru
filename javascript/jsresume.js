@@ -18,11 +18,29 @@ Vue.component('job-item', {
               <div v-if="contact.id==1"><i class="fa fa-phone fa-lg"></i></div>
               <div v-else-if="contact.id==2"><i class="fa fa-envelope"></i></div>
               <div v-else><i class="fa fa-map-marker fa-lg"></i></div>
-                <div> <h4 class="contact-title">{{ contact.title }}</h4>
-                  <span class="contact">{{ contact.value }}</span>
+                 <div>  <h4 class="contact-title">{{ contact.title }}</h4>
+				<span v-if="contact.id==2" class="contact">  <a href="https://gmail.com">{{ contact.value }}</a></span>
+  
+				<span v-else class="contact">{{ contact.value }}</span>
                 </div>
             </div>`
 })
+
+Vue.component('duty-item', {
+	props: ['duty'],
+	template: `
+	<div class="marginbottom">
+	  
+	   
+	  <div class="main-inf">
+	
+	  <p>{{duty.value}}</p>
+	  
+	  </div>
+   </div> 
+`
+})
+
 
 Vue.component('education-item', {
 	props: ['education'],
@@ -61,17 +79,13 @@ Vue.component('skills-item', {
 	template: `
 	<div class="skill" > 
 	<span class="title">{{ skill.title }}</span>
-	<div class="progressbar" v-if="skill.id==1">
-	  <span  style="width: 60%"></span></div>
-	  <div class="progressbar" v-if="skill.id==2">
-		<span  style="width: 60%"></span></div>
-		<div class="progressbar" v-if="skill.id==3">
-		  <span  style="width: 40%"></span></div>
-		  <div class="progressbar" v-if="skill.id==4">
-			<span  style="width: 50%"></span></div>
-			 <div class="progressbar" v-if="skill.id==5">
-			  <span  style="width: 40%"></span></div>
-	  
+	
+	<progress class="progressbar" v-if="skill.id==1" max="100" value="70"></progress>
+	<progress class="progressbar" v-if="skill.id==2" max="100" value="60"></progress>
+	<progress class="progressbar" v-if="skill.id==3" max="100" value="40"></progress>
+	<progress class="progressbar"  v-if="skill.id==4" max="100" value="50"></progress>
+	<progress class="progressbar" v-if="skill.id==5" max="100" value="40"></progress>
+	<progress class="progressbar" v-if="skill.id==6" max="100" value="30"></progress>	  
   </div>   
 	`
 })
@@ -87,13 +101,17 @@ let app = new Vue({
 		{id:2, title:'CSS', value:60},
 		{id:3, title:'JavaScript', value:40},
 		{id:4, title:'English', value:50},
-		{id:5, title: 'Vue.js', value:40}
+		{id:5, title: 'Vue.js', value:40},
+		{id:6, title: 'GIT', value:30}
 	    ],
 	  	contacts:[
 		{id:1, title:'телефон', value:'8-987-499-15-40'},
 		{id:2, title:'email', value:'axioma.25@gmail.com'},
         {id:3, title:'адрес', value:'Уфа, ул. Зои Космодемьянской, д.60'}
         ],
+		duties: [
+		{id:1, value:'Разработка сайтов для клиентов в команде программистов, их последующая поддержка'}	
+		],
         jobs:[
           {title:'Видеомонтажер', year:'2011-2017', 
           value:'Видеомонтаж свадебных фильмов, клипов, детских утренников и т.д. в программе Adobe Premiere. Производство обложки для коробки в программе Adobe Photosop.'
@@ -104,7 +122,7 @@ let app = new Vue({
 		}, 
 		  {title:'ООО "Мегател"', year:'2019-по н/в',  
 		  position: 'Специалист по обслуживанию клиентов',
-		  value: 'Выявление причин отсутствия связи в области телеметрии, консультация клиентов, подготовка грамоного письменного/устно ответа.'
+		  value: 'Выявление причин отсутствия связи в области телеметрии, консультация клиентов, подготовка грамотного письменного/устно ответа.'
 		}
         ],
 		education:[
