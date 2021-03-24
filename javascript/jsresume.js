@@ -19,7 +19,10 @@ Vue.component('job-item', {
               <div v-else-if="contact.id==2"><i class="fa fa-envelope"></i></div>
               <div v-else><i class="fa fa-map-marker fa-lg"></i></div>
                  <div>  <h4 class="contact-title">{{ contact.title }}</h4>
-				<span v-if="contact.id==2" class="contact">  <a href="https://gmail.com">{{ contact.value }}</a></span>
+				 <span v-if="contact.id==1" class="contact"> 
+				 <a href="tel:+79874991540">{{ contact.value }}</a></span> 
+				<span v-else-if="contact.id==2" class="contact"> 
+				 <a href="https://gmail.com">{{ contact.value }}</a></span>
   
 				<span v-else class="contact">{{ contact.value }}</span>
                 </div>
@@ -119,7 +122,7 @@ let app = new Vue({
 		}, 
 		  {title:'ООО "Мегател"', year:'2019-по н/в',  
 		  position: 'Специалист отдела разработки и поддержки',
-		  value: 'Выявление причин отсутствия связи в области телеметрии, консультация клиентов, подготовка грамотного письменного/устно ответа.'
+		  value: 'Выявление причин отсутствия связи в области телеметрии, консультация клиентов, подготовка грамотного письменного/устного ответа.'
 		}
         ],
 		education:[
