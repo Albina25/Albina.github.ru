@@ -16,12 +16,15 @@ Vue.component('job-item', {
 	template: `
             <div class="part-contact" >
               <div v-if="contact.id==1"><i class="fa fa-phone fa-lg"></i></div>
-              <div v-else-if="contact.id==2"><i class="fa fa-envelope"></i></div>
+              <div v-else-if="contact.id==2"><i class="fa fa-whatsapp fa-lg"></i></div>
+			  <div v-else-if="contact.id==3"><i class="fa fa-envelope"></i></div>
               <div v-else><i class="fa fa-map-marker fa-lg"></i></div>
                  <div>  <h4 class="contact-title">{{ contact.title }}</h4>
 				 <span v-if="contact.id==1" class="contact"> 
 				 <a href="tel:+79874991540">{{ contact.value }}</a></span> 
-				<span v-else-if="contact.id==2" class="contact"> 
+				 <span v-else-if="contact.id==2" class="contact"> 
+				 <a href="https://wa.me/79874991540">{{ contact.value }}</a></span>
+				<span v-else-if="contact.id==3" class="contact"> 
 				 <a href="https://gmail.com">{{ contact.value }}</a></span>
   
 				<span v-else class="contact">{{ contact.value }}</span>
@@ -33,7 +36,7 @@ Vue.component('duty-item', {
 	props: ['duty'],
 	template: `
 	<div class="marginbottom">
-	  <div class="main-inf">
+	  <div>
 	   <p>{{duty.value}}</p>
 	  </div>
    </div> 
@@ -84,7 +87,7 @@ Vue.component('skills-item', {
 	<progress class="progressbar" v-if="skill.id==3" max="100" value="40"></progress>
 	<progress class="progressbar"  v-if="skill.id==4" max="100" value="50"></progress>
 	<progress class="progressbar" v-if="skill.id==5" max="100" value="40"></progress>
-	<progress class="progressbar" v-if="skill.id==6" max="100" value="30"></progress>	  
+	<progress class="progressbar" v-if="skill.id==6" max="100" value="70"></progress>	  
   </div>   
 	`
 })
@@ -101,12 +104,14 @@ let app = new Vue({
 		{id:3, title:'JavaScript', value:40},
 		{id:4, title:'English', value:50},
 		{id:5, title: 'Vue.js', value:40},
-		{id:6, title: 'GIT', value:30}
+		{id:6, title: 'GIT', value:70}
 	    ],
 	  	contacts:[
 		{id:1, title:'телефон', value:'8-987-499-15-40'},
-		{id:2, title:'email', value:'axioma.25@gmail.com'},
-        {id:3, title:'адрес', value:'Уфа, ул. Зои Космодемьянской, д.60'}
+		{id:2, title:'WhatsApp', value:'8-987-499-15-40'},
+		{id:3, title:'email', value:'axioma.25@gmail.com'},
+        {id:4, title:'адрес', value:'Уфа, ул. Зои Космодемьянской, д.60'},
+		
         ],
 		duties: [
 		{id:1, value:'Разработка сайтов для клиентов в команде программистов, их последующая поддержка.'}	
