@@ -1,13 +1,13 @@
 Vue.component('job-item', {
 	props: ['job'],
 	template: `
-	<div class="marginbottom">
+	<div>
 	   <div class="main-inf-title" > 
 	     <h3>{{ job.title }}</h3>
          <div class="years">{{job.year}}</div> 
         </div> 
         <div  class="main-inf"><h4>{{job.position}}</h4></div>
-        <p>{{job.value}}</p>
+        <p class="marginbottom">{{job.value}}</p>
   </div>`
   })
 
@@ -35,9 +35,9 @@ Vue.component('job-item', {
 Vue.component('duty-item', {
 	props: ['duty'],
 	template: `
-	<div class="marginbottom">
-	  <div>
-	   <p>{{duty.value}}</p>
+	<div>
+	  <div class="marginbottom">
+	   <p class="marginbottom">{{duty.value}}</p>
 	  </div>
    </div> 
 `
@@ -47,7 +47,7 @@ Vue.component('duty-item', {
 Vue.component('education-item', {
 	props: ['education'],
 	template: `
-	<div class="marginbottom">
+	<div>
 	  <div class="main-inf-title">
 	   <h3> {{education.title}}</h3>
 	   <div class="years">{{education.year}}</div> 
@@ -55,7 +55,7 @@ Vue.component('education-item', {
 	  <div class="main-inf">
 	
 	  <p>{{education.faculty}}</p>
-	  <p>Специальность: {{education.specialty}}</p>
+	  <p class="marginbottom">Специальность: {{education.specialty}}</p>
 	  </div>
    </div> 
 `
@@ -64,13 +64,13 @@ Vue.component('education-item', {
 Vue.component('differences-item', {
 	props: ['best'],
 	template: `
-	<div class="marginbottom">
+	<div>
 	<div class="main-inf-title">
 	 <h3>{{best.title}}</h3>
 	<div class="years">{{best.year}}</div> 
 	</div>
 	<div class="main-inf">
-	 <p>{{best.value}}</p>
+	 <p class="marginbottom">{{best.value}}</p>
 	</div>
   </div>
 	`
