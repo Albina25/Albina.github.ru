@@ -69,6 +69,7 @@ body {
 .margin-left {
 	margin-left: 0.5rem;
 }
+
 .block-name {
 	display: flex;
 	flex: 1;
@@ -104,7 +105,6 @@ body {
 
 a:hover {
 	color: grey;
-
 }
 
 a {
@@ -117,16 +117,11 @@ a:visited {
 }
 
 .contact-title{
-	/*margin: 1rem 0;*/
 	text-transform: uppercase;
-	/*padding-left: 1rem*/
 }
 
 .part-contact {
 	display: flex;
-	/* flex-direction: row; */
-	/* flex-wrap: nowrap; */
-	/* width: 16rem; */
 	margin-top: 1rem;
 }
 
@@ -156,7 +151,6 @@ a:visited {
 .progressbar {
 	display: flex;
 	align-items: center;
-	/* height: 0.5rem;  */
 	padding: 1px; 
 	width: 60%;
 	background: white; 
@@ -197,11 +191,10 @@ a:visited {
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
 	html, body {
-	font-size: 12px;
+		font-size: 12px;
 	}
 
 	.main-block {
-		/* width: 100%; */
 		flex-direction: column;
 	}
 
@@ -209,7 +202,6 @@ a:visited {
 		padding-left:1rem;
 		padding-bottom: 1rem;	
 	}
-
 	
 	.contact { 
 		display: flex;
@@ -240,14 +232,14 @@ a:visited {
 	.progressbar {
 		width: 50%;
 	}
-
 	
     .name {
     	font-size: 1.5rem;
     }
+
 	.block-ava {
 		width: 10rem;
-}
+	}
 }
 @media only screen and (min-width: 892px) {
 	.main-block {

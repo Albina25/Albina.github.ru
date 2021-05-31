@@ -3,97 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <script defer src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
-
 <link rel="stylesheet" href="style3.css"> 
-<!-- <link rel="stylesheet" href="fontawesome/css/all.css"> -->
-<!-- <link rel="stylesheet" href="css/awesome/fontawesome.min.css"> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=cyrillic,latin"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
 <script defer src="javascript/vue.js"></script>
 <script defer src="javascript/jsresume.js"></script>
-
 <title>Резюме - Альбина Кашапова</title>
 </head>
+
 <body>
-<div id="app">
-  <div class="main-block"> 
-    <div class="block-top">
-    
-      <div class="block-ava"><img :src="image" class="avatar" alt="Альбина">
-      </div> 
-        <div class="block-name">
-           <h1 class="name">{{name}}</h1>
-           <h2 class="professional">{{speciality}}</h2>
-        </div>
-    </div>
-    <div class="block-bottom">
-      <div class="block-left">
-
-        <div class = "skills">
-          <h3 class = "contacts-title"><i class="fa fa-check"></i>навыки</h3>
-          <skills-item
-          v-for="item in skills" 
-          :key="item.title"
-          :skill="item"
-          >
-          
-          </skills-item>
-        </div>
-        <div class="contacts">
-          <h3 class = "contacts-title"><i class="fa fa-check"></i>контакты</h3>
-          <contacts-item 
-            v-for="item in contacts" 
-            :key="item.id"
-            :contact="item">
-          </contacts-item>
+  <div id="app">
+    <div class="main-block"> 
+      <div class="block-top">
+        <div class="block-ava"><img :src="image" class="avatar" alt="Альбина">
         </div> 
-      </div>   
-     
-     
-        <div class="information">
-          <div class="part-inf">
-            <h3 class = "inf-title">что ищу</h3>
-              <duty-item
-               v-for="item in duties" 
-              :duty="item"
-              :key="item.id"
-              >
-              </duty-item>
-          </div> 
-    
-            <div class="part-inf">
-              <h3 class = "inf-title">чем отличилась</h3>
-                <differences-item
-                v-for="item in differences"
-                :best="item"
-                :key="item.title"
-                >
-                </differences-item>
-            </div>
-            <div class="part-inf">
-              <h3 class = "inf-title">где работала</h3>
-              <job-item  
-               v-for="item in jobs"
-              v-bind:job="item"
-               v-bind:key="item.id"
-              ></job-item>
-            </div>
-            <div class="part-inf">
-              <h3 class = "inf-title">где училась</h3>
-                <education-item
-                 v-for="item in education" 
-                :education="item"
-                :key="item.title"
-                >
-                </education-item>
-            </div>    
+        <div class="block-name">
+          <h1 class="name">{{name}}</h1>
+          <h2 class="professional">{{speciality}}</h2>
         </div>
-    </div>
-  </div> 
-  
-</div>
-
- 
+      </div>
+      <div class="block-bottom">
+        <div class="block-left">
+          <div class = "skills">
+            <h3 class = "contacts-title"><i class="fa fa-check"></i>навыки</h3>
+            <skills-item
+              v-for="item in skills" 
+              :key="item.title"
+              :skill="item">
+            </skills-item>
+          </div>
+          <div class="contacts">
+            <h3 class = "contacts-title"><i class="fa fa-check"></i>контакты</h3>
+            <contacts-item 
+              v-for="item in contacts" 
+              :key="item.id"
+              :contact="item">
+            </contacts-item>
+          </div> 
+        </div>   
+      
+          <div class="information">
+            <div class="part-inf">
+              <h3 class = "inf-title">что ищу</h3>
+                <duty-item
+                  v-for="item in duties" 
+                  :duty="item"
+                  :key="item.id">
+                </duty-item>
+            </div> 
+      
+              <div class="part-inf">
+                <h3 class = "inf-title">чем отличилась</h3>
+                  <differences-item
+                    v-for="item in differences"
+                    :best="item"
+                    :key="item.title">
+                  </differences-item>
+              </div>
+              <div class="part-inf">
+                <h3 class = "inf-title">где работала</h3>
+                <job-item  
+                  v-for="item in jobs"
+                  v-bind:job="item"
+                  v-bind:key="item.id">
+                </job-item>
+              </div>
+              <div class="part-inf">
+                <h3 class = "inf-title">где училась</h3>
+                <education-item
+                  v-for="item in education" 
+                  :education="item"
+                  :key="item.title">
+                </education-item>
+              </div>    
+          </div>
+      </div>
+    </div> 
+  </div>
 </body>
 </html>
